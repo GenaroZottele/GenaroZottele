@@ -98,17 +98,17 @@ const celularVenta = (cant) => {
     impuestos = Number(prompt("Desea comprarlo facturado o sin facturar:\n 1 - Facturado \n 2 - Sin facturar "))
     if (impuestos == 1) {
         celular = (21*celular)/100 + celular;
-        console.log(`El total con impuestos es de $ ${celular}`);
+        console.log(`El total de celular con impuestos es de $ ${celular}`);
     }else{
-        console.log(`El total sin impuestos es de $ ${celular}`);
+        console.log(`El total de celular sin impuestos es de $ ${celular}`);
     }
     descuento = prompt("Ingrese su codigo de descuento");
     if (descuento == "cel10off") {
         rebaja = (10*celular)/100;
         celular = celular - rebaja;
-        console.log(`El total con descuentos es de $ ${celular}`);
+        console.log(`El total de celular con descuentos es de $ ${celular}`);
     }else{
-        console.log(`El total es de $ ${celular}`);
+        console.log(`El total de celular es de $ ${celular}`);
     }
 }
 
@@ -118,17 +118,17 @@ const tabletVenta = (cant) => {
     impuestos = Number(prompt("Desea comprarlo facturado o sin facturar:\n 1 - Facturado \n 2 - Sin facturar "))
     if (impuestos == 1) {
         tablet = (21*tablet)/100 + tablet;
-        console.log(`El total con impuestos es de $ ${tablet}`);
+        console.log(`El total de tablet con impuestos es de $ ${tablet}`);
     }else{
-        console.log(`El total sin impuestos es de $ ${tablet}`);
+        console.log(`El total de tablet sin impuestos es de $ ${tablet}`);
     }
     descuento = prompt("Ingrese su codigo de descuento");
     if (descuento == "cel10off") {
         rebaja = (10*tablet)/100;
         tablet = tablet - rebaja;
-        console.log(`El total con descuentos es de $ ${tablet}`);
+        console.log(`El total de tablet con descuentos es de $ ${tablet}`);
     }else{
-        console.log(`El total es de $ ${tablet}`);
+        console.log(`El total de tablet es de $ ${tablet}`);
     }
 }
 
@@ -138,17 +138,17 @@ const tabletSpeaker = (cant) => {
     impuestos = Number(prompt("Desea comprarlo facturado o sin facturar:\n 1 - Facturado \n 2 - Sin facturar "))
     if (impuestos == 1) {
         speaker = (21*speaker)/100 + speaker;
-        console.log(`El total con impuestos es de $ ${speaker}`);
+        console.log(`El total de speaker con impuestos es de $ ${speaker}`);
     }else{
-        console.log(`El total sin impuestos es de $ ${speaker}`);
+        console.log(`El total de speaker sin impuestos es de $ ${speaker}`);
     }
     descuento = prompt("Ingrese su codigo de descuento");
     if (descuento == "cel10off") {
         rebaja = (10*speaker)/100;
         speaker = speaker - rebaja;
-        console.log(`El total con descuentos es de $ ${speaker}`);
+        console.log(`El total de speaker con descuentos es de $ ${speaker}`);
     }else{
-        console.log(`El total es de $ ${speaker}`);
+        console.log(`El total de speaker es de $ ${speaker}`);
     }
 }
 // menu
