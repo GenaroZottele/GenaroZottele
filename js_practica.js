@@ -83,96 +83,142 @@
 
 // variables globales
 
-let celular = 500;
-let tablet = 350;
-let speaker = 250;
-let opcion;
-let impuestos;
-let descuento;
+// let celular = 500;
+// let tablet = 350;
+// let speaker = 250;
+// let opcion;
+// let impuestos;
+// let descuento;
 
 // funciones
 
-const celularVenta = (cant) => {
-    celular = celular*cant
-    console.log(`El subtotal es de $ ${celular}`);
-    impuestos = Number(prompt("Desea comprarlo facturado o sin facturar:\n 1 - Facturado \n 2 - Sin facturar "))
-    if (impuestos == 1) {
-        celular = (21*celular)/100 + celular;
-        console.log(`El total de celular con impuestos es de $ ${celular}`);
-    }else{
-        console.log(`El total de celular sin impuestos es de $ ${celular}`);
-    }
-    descuento = prompt("Ingrese su codigo de descuento");
-    if (descuento == "cel10off") {
-        rebaja = (10*celular)/100;
-        celular = celular - rebaja;
-        console.log(`El total de celular con descuentos es de $ ${celular}`);
-    }else{
-        console.log(`El total de celular es de $ ${celular}`);
-    }
-}
+// const celularVenta = (cant) => {
+//     celular = celular*cant
+//     console.log(`El subtotal es de $ ${celular}`);
+//     impuestos = Number(prompt("Desea comprarlo facturado o sin facturar:\n 1 - Facturado \n 2 - Sin facturar "))
+//     if (impuestos == 1) {
+//         celular = (21*celular)/100 + celular;
+//         console.log(`El total de celular con impuestos es de $ ${celular}`);
+//     }else{
+//         console.log(`El total de celular sin impuestos es de $ ${celular}`);
+//     }
+//     descuento = prompt("Ingrese su codigo de descuento");
+//     if (descuento == "cel10off") {
+//         rebaja = (10*celular)/100;
+//         celular = celular - rebaja;
+//         console.log(`El total de celular con descuentos es de $ ${celular}`);
+//     }else{
+//         console.log(`El total de celular es de $ ${celular}`);
+//     }
+// }
 
-const tabletVenta = (cant) => {
-    tablet = tablet*cant
-    console.log(`El subtotal es de $ ${tablet}`);
-    impuestos = Number(prompt("Desea comprarlo facturado o sin facturar:\n 1 - Facturado \n 2 - Sin facturar "))
-    if (impuestos == 1) {
-        tablet = (21*tablet)/100 + tablet;
-        console.log(`El total de tablet con impuestos es de $ ${tablet}`);
-    }else{
-        console.log(`El total de tablet sin impuestos es de $ ${tablet}`);
-    }
-    descuento = prompt("Ingrese su codigo de descuento");
-    if (descuento == "cel10off") {
-        rebaja = (10*tablet)/100;
-        tablet = tablet - rebaja;
-        console.log(`El total de tablet con descuentos es de $ ${tablet}`);
-    }else{
-        console.log(`El total de tablet es de $ ${tablet}`);
-    }
-}
+// const tabletVenta = (cant) => {
+//     tablet = tablet*cant
+//     console.log(`El subtotal es de $ ${tablet}`);
+//     impuestos = Number(prompt("Desea comprarlo facturado o sin facturar:\n 1 - Facturado \n 2 - Sin facturar "))
+//     if (impuestos == 1) {
+//         tablet = (21*tablet)/100 + tablet;
+//         console.log(`El total de tablet con impuestos es de $ ${tablet}`);
+//     }else{
+//         console.log(`El total de tablet sin impuestos es de $ ${tablet}`);
+//     }
+//     descuento = prompt("Ingrese su codigo de descuento");
+//     if (descuento == "cel10off") {
+//         rebaja = (10*tablet)/100;
+//         tablet = tablet - rebaja;
+//         console.log(`El total de tablet con descuentos es de $ ${tablet}`);
+//     }else{
+//         console.log(`El total de tablet es de $ ${tablet}`);
+//     }
+// }
 
-const tabletSpeaker = (cant) => {
-    speaker = speaker*cant
-    console.log(`El subtotal es de $ ${speaker}`);
-    impuestos = Number(prompt("Desea comprarlo facturado o sin facturar:\n 1 - Facturado \n 2 - Sin facturar "))
-    if (impuestos == 1) {
-        speaker = (21*speaker)/100 + speaker;
-        console.log(`El total de speaker con impuestos es de $ ${speaker}`);
-    }else{
-        console.log(`El total de speaker sin impuestos es de $ ${speaker}`);
-    }
-    descuento = prompt("Ingrese su codigo de descuento");
-    if (descuento == "cel10off") {
-        rebaja = (10*speaker)/100;
-        speaker = speaker - rebaja;
-        console.log(`El total de speaker con descuentos es de $ ${speaker}`);
-    }else{
-        console.log(`El total de speaker es de $ ${speaker}`);
-    }
-}
+// const tabletSpeaker = (cant) => {
+//     speaker = speaker*cant
+//     console.log(`El subtotal es de $ ${speaker}`);
+//     impuestos = Number(prompt("Desea comprarlo facturado o sin facturar:\n 1 - Facturado \n 2 - Sin facturar "))
+//     if (impuestos == 1) {
+//         speaker = (21*speaker)/100 + speaker;
+//         console.log(`El total de speaker con impuestos es de $ ${speaker}`);
+//     }else{
+//         console.log(`El total de speaker sin impuestos es de $ ${speaker}`);
+//     }
+//     descuento = prompt("Ingrese su codigo de descuento");
+//     if (descuento == "cel10off") {
+//         rebaja = (10*speaker)/100;
+//         speaker = speaker - rebaja;
+//         console.log(`El total de speaker con descuentos es de $ ${speaker}`);
+//     }else{
+//         console.log(`El total de speaker es de $ ${speaker}`);
+//     }
+// }
 // menu
 
-do{
-    opcion = Number(prompt("Ingrese una opcion:\n 1 - Celular \n 2 - Tablet \n 3 - Speaker \n 4 - Salir"))
-    switch (opcion) {
-        case 1:
-            cant = Number(prompt(`Ingrese la cantidad que quiere comprar`));
-            celularVenta(cant)
-            break;
-        case 2:
-            cant = Number(prompt(`Ingrese la cantidad que quiere comprar`))
-            tabletVenta(cant);
-            break;
-        case 3:
-            cant = Number(prompt(`Ingrese la cantidad que quiere comprar`))
-            tabletSpeaker(cant);
-            break;
-        case 4:
-            salir();
-            break
-        default:
-            alert("incorrecta")
-            break;
+// do{
+//     opcion = Number(prompt("Ingrese una opcion:\n 1 - Celular \n 2 - Tablet \n 3 - Speaker \n 4 - Salir"))
+//     switch (opcion) {
+//         case 1:
+//             cant = Number(prompt(`Ingrese la cantidad que quiere comprar`));
+//             celularVenta(cant)
+//             break;
+//         case 2:
+//             cant = Number(prompt(`Ingrese la cantidad que quiere comprar`))
+//             tabletVenta(cant);
+//             break;
+//         case 3:
+//             cant = Number(prompt(`Ingrese la cantidad que quiere comprar`))
+//             tabletSpeaker(cant);
+//             break;
+//         case 4:
+//             salir();
+//             break
+//         default:
+//             alert("incorrecta")
+//             break;
+//     }
+// }while(opcion !== 4)
+
+// ------------------ Ejercicio incluyendo arrays ------------------
+
+class Producto {
+    constructor(nombre, precio){
+        this.nombre = nombre;
+        this.precio = precio;
     }
-}while(opcion !== 4)
+}
+
+const productos = 
+[{nombre:"SMARTPHONE",precio:600},
+{nombre:"TABLET",precio:300},
+{nombre:"SPEAKER",precio:200},
+{nombre:"SMARTTV",precio:500},
+];
+
+let carrito;
+function seleccion(productos, busqueda) {
+    carrito = productos.filter(item => item.nombre === busqueda);
+    return carrito;
+}
+let subtotalCompra;
+function subtotal(carrito,cantidad) {
+    carrito.forEach(element => {
+        return  subtotalCompra = element.precio*cantidad
+    });
+    
+}
+let total = 0;
+
+
+for (let index = 0; index < Number.MAX_SAFE_INTEGER; index++) {
+    let busqueda = prompt("INGRESE LO QUE DESEA COMPRAR \n SMARTPHONE \n TABLET \n SPEAKER \n SMARTTV \n EXIT").toUpperCase();
+    seleccion(productos,busqueda)
+    if (busqueda == "EXIT") {
+        break
+    }
+    
+    let cantidad = parseInt(prompt("CANTIDAD DEL PRODUCTO"))
+    subtotal(carrito,cantidad)
+    total += subtotalCompra
+    console.log(carrito);
+}
+
+console.log(total);
