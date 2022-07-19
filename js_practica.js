@@ -179,46 +179,105 @@
 
 // ------------------ Ejercicio incluyendo arrays ------------------
 
+// class Producto {
+//     constructor(nombre, precio){
+//         this.nombre = nombre;
+//         this.precio = precio;
+//     }
+// }
+
+// const productos = 
+// [{nombre:"SMARTPHONE",precio:600},
+// {nombre:"TABLET",precio:300},
+// {nombre:"SPEAKER",precio:200},
+// {nombre:"SMARTTV",precio:500},
+// ];
+
+// let carrito;
+// function seleccion(productos, busqueda) {
+//     carrito = productos.filter(item => item.nombre === busqueda);
+//     return carrito;
+// }
+// let subtotalCompra;
+// function subtotal(carrito,cantidad) {
+//     carrito.forEach(element => {
+//         return  subtotalCompra = element.precio*cantidad
+//     });
+    
+// }
+// let total = 0;
+
+
+// for (let index = 0; index < Number.MAX_SAFE_INTEGER; index++) {
+//     let busqueda = prompt("INGRESE LO QUE DESEA COMPRAR \n SMARTPHONE \n TABLET \n SPEAKER \n SMARTTV \n EXIT").toUpperCase();
+//     seleccion(productos,busqueda)
+//     if (busqueda == "EXIT") {
+//         break
+//     }
+    
+//     let cantidad = parseInt(prompt("CANTIDAD DEL PRODUCTO"))
+//     subtotal(carrito,cantidad)
+//     total += subtotalCompra
+//     console.log(carrito);
+// }
+
+// console.log(total);
+
+//-------------- INTERACTUAR CON HMTL----------------
+
+// -------------VARIABLES--------------------
+let nombre;
+let precioCompra;
+let precioVenta;
+let cantidad;
+let continuar;
+let productos = [];
+
 class Producto {
-    constructor(nombre, precio){
+    constructor(nombre, precioCompra, precioVenta, cantidad){
         this.nombre = nombre;
-        this.precio = precio;
+        this.precioCompra = precioCompra;
+        this.precioVenta = precioVenta;
+        this.cantidad = cantidad;
     }
 }
 
-const productos = 
-[{nombre:"SMARTPHONE",precio:600},
-{nombre:"TABLET",precio:300},
-{nombre:"SPEAKER",precio:200},
-{nombre:"SMARTTV",precio:500},
-];
-
-let carrito;
-function seleccion(productos, busqueda) {
-    carrito = productos.filter(item => item.nombre === busqueda);
-    return carrito;
+// -----------------FUNCIONES------------------
+function subirProductos(nombre,precioCompra,precioVenta,cantidad) {
+    let nuevoProducto = new Producto(nombre,precioCompra,precioVenta,cantidad);
+    productos.push(nuevoProducto)
 }
-let subtotalCompra;
-function subtotal(carrito,cantidad) {
-    carrito.forEach(element => {
-        return  subtotalCompra = element.precio*cantidad
+function agregarProductosTabla(){
+    productos.forEach(producto => {
+        let tabla = document.querySelector(".tabla")
+        let filaTabla = document.createElement("tr")
+
+        filaTabla.innerHTML = `
+        <td>${producto.nombre} </td>
+        <td>${producto.precioCompra} </td>
+        <td>${producto.precioVenta} </td>
+        <td>${producto.cantidad} </td>
+        `
+
+    tabla.append(filaTabla)
+
     });
-    
 }
-let total = 0;
 
+// ------------------CICLOS--------------------
 
-for (let index = 0; index < Number.MAX_SAFE_INTEGER; index++) {
-    let busqueda = prompt("INGRESE LO QUE DESEA COMPRAR \n SMARTPHONE \n TABLET \n SPEAKER \n SMARTTV \n EXIT").toUpperCase();
-    seleccion(productos,busqueda)
-    if (busqueda == "EXIT") {
+for (let index = 0; index < Number.MAX_SAFE_INTEGER; index++){
+    nombre = prompt('Ingrese nombre de producto');
+    precioCompra = parseInt(prompt('Ingrese precio de compra'));
+    precioVenta = parseInt(prompt('Ingrese precio de venta'));
+    cantidad = parseInt(prompt('Ingrese la cantidad'));
+    subirProductos(nombre,precioCompra,precioVenta,cantidad);
+    
+    continuar = prompt('Desea continuar \n -SI \n -NO').toUpperCase();
+    if (continuar == 'NO') {
+        agregarProductosTabla();
         break
     }
     
-    let cantidad = parseInt(prompt("CANTIDAD DEL PRODUCTO"))
-    subtotal(carrito,cantidad)
-    total += subtotalCompra
-    console.log(carrito);
+ 
 }
-
-console.log(total);
