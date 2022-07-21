@@ -226,27 +226,39 @@
 //-------------- INTERACTUAR CON HMTL----------------
 
 // -------------VARIABLES--------------------
-let nombre;
-let precioCompra;
-let precioVenta;
-let cantidad;
-let continuar;
+
+// let nombre;
+// let precioCompra;
+// let precioVenta;
+// let cantidad;
+// let continuar;
 let productos = [];
+let boton = document.getElementById("btnPrincipal"); 
+let boton2 = document.getElementById("btnLimpiar"); 
+let input1 = document.getElementById("idNombre");
+let input2 = document.getElementById("idCalle");
+let input3 = document.getElementById("idCiudad");
+let input4 = document.getElementById("idProvincia");
+let input5 = document.getElementById("idPostal");
+let formulario = document.getElementById("formulario");
 
 class Producto {
-    constructor(nombre, precioCompra, precioVenta, cantidad){
+    constructor(nombre, calle, ciudad, provincia, postal){
         this.nombre = nombre;
-        this.precioCompra = precioCompra;
-        this.precioVenta = precioVenta;
-        this.cantidad = cantidad;
+        this.calle = calle;
+        this.ciudad = ciudad;
+        this.provincia = provincia;
+        this.postal = postal;
     }
 }
 
 // -----------------FUNCIONES------------------
-function subirProductos(nombre,precioCompra,precioVenta,cantidad) {
-    let nuevoProducto = new Producto(nombre,precioCompra,precioVenta,cantidad);
-    productos.push(nuevoProducto)
-}
+
+// function subirProductos(nombre,precioCompra,precioVenta,cantidad) {
+//     let nuevoProducto = new Producto(input1,input2,input3,input4,input5);
+//     productos.push(nuevoProducto)
+// }
+
 function agregarProductosTabla(){
     productos.forEach(producto => {
         let tabla = document.querySelector(".tabla")
@@ -254,9 +266,10 @@ function agregarProductosTabla(){
 
         filaTabla.innerHTML = `
         <td>${producto.nombre} </td>
-        <td>${producto.precioCompra} </td>
-        <td>${producto.precioVenta} </td>
-        <td>${producto.cantidad} </td>
+        <td>${producto.calle} </td>
+        <td>${producto.ciudad} </td>
+        <td>${producto.provincia} </td>
+        <td>${producto.postal} </td>
         `
 
     tabla.append(filaTabla)
@@ -264,20 +277,32 @@ function agregarProductosTabla(){
     });
 }
 
+boton.onclick = (event) => {
+    event.preventDefault();
+    let nuevoProducto = new Producto(input1.value,input2.value,input3.value,input4.value,input5.value);
+    productos.push(nuevoProducto)
+    agregarProductosTabla();
+}
+
+boton2.onclick = (e) => {
+    e.preventDefault();
+    formulario.reset();
+}
+
 // ------------------CICLOS--------------------
 
-for (let index = 0; index < Number.MAX_SAFE_INTEGER; index++){
-    nombre = prompt('Ingrese nombre de producto');
-    precioCompra = parseInt(prompt('Ingrese precio de compra'));
-    precioVenta = parseInt(prompt('Ingrese precio de venta'));
-    cantidad = parseInt(prompt('Ingrese la cantidad'));
-    subirProductos(nombre,precioCompra,precioVenta,cantidad);
+// for (let index = 0; index < Number.MAX_SAFE_INTEGER; index++){
+//     nombre = prompt('Ingrese nombre de producto');
+//     precioCompra = parseInt(prompt('Ingrese precio de compra'));
+//     precioVenta = parseInt(prompt('Ingrese precio de venta'));
+//     cantidad = parseInt(prompt('Ingrese la cantidad'));
+//     subirProductos(nombre,precioCompra,precioVenta,cantidad);
     
-    continuar = prompt('Desea continuar \n -SI \n -NO').toUpperCase();
-    if (continuar == 'NO') {
-        agregarProductosTabla();
-        break
-    }
+//     continuar = prompt('Desea continuar \n -SI \n -NO').toUpperCase();
+//     if (continuar == 'NO') {
+//         agregarProductosTabla();
+//         break
+//     }
     
  
-}
+// }
