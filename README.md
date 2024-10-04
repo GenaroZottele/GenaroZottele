@@ -1,4 +1,4 @@
-![Genaro Zottele banner]([https://www.canva.com/design/DAGSne86Fyk/vD8lY0w9E3NEpXATuRVeHg/watch?utm_content=DAGSne86Fyk&utm_campaign=designshare&utm_medium=link&utm_source=editor])
+![Genaro Zottele banner](https://github.com/GenaroZottele/GenaroZottele/blob/main/BACKEND%20DEVELOPER.gif)
 
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2 align="left">Hey there! I'm Genaro Zottele</h2>
 
