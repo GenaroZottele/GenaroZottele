@@ -11,8 +11,8 @@
 🌱 &nbsp;Estoy en proceso de aprender más sobre Flutter y tecnologías de desarrollo Mobile.\
 ✍️ &nbsp;En mi tiempo libre, me dedico al diseño de Sitios Web desde Landing Page hasta Ecommerce.\
 💬 &nbsp;No dudes en contactarme para ofrecerme algún tipo de oferta laboral, o simplemente para alguna discusión interesante.\
-✉️ &nbsp;¡Puedes enviarme un correo a genarozottele14@gmail ! Trataré de responder lo antes posible.
-📄 &nbsp;Puedes ver mi CV aquí [Résumé]([(https://drive.google.com/file/d/1ie0Pf-oNGINJKicMMF9bx-emH5I96VOP/view?usp=sharing)]) para leer ams detalles sobre mí. Cualquier critica constructiva es bienvenida!
+✉️ &nbsp;¡Puedes enviarme un correo a genarozottele14@gmail ! Trataré de responder lo antes posible.\
+📄 &nbsp;Puedes ver mi CV aquí [CV](https://drive.google.com/file/d/1ie0Pf-oNGINJKicMMF9bx-emH5I96VOP/view?usp=sharing) para leer ams detalles sobre mí. Cualquier critica constructiva es bienvenida!
 
 
 <img alt="Night Coding" src="https://raw.githubusercontent.com/AVS1508/AVS1508/master/assets/Night-Coding.gif" align="right"/>
